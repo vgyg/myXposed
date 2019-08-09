@@ -70,17 +70,21 @@ public class Test implements IXposedHookLoadPackage {
                                 Log.i(TAG, "response: " + response);
 
                                 JSONObject jsonObject = new JSONObject(response);
-                                jsonObject.has("friendRanking");
-                                if (AliMobileAutoCollectEnergyUtils.isRankList(response)) {
-                                    AliMobileAutoCollectEnergyUtils.autoGetCanCollectUserIdList(loader, response);
-                                }
+                                boolean a= jsonObject.has("friendRanking");
+                                Log.i(TAG, "has friendRanking " + a);
+                                boolean a= jsonObject.has("bizNo");
+                                Log.i(TAG, "has friendRanking " + a);
+
+//                                if (AliMobileAutoCollectEnergyUtils.isRankList(response)) {
+//                                    AliMobileAutoCollectEnergyUtils.autoGetCanCollectUserIdList(loader, response);
+//                                }
 
 //                                AliMobileAutoCollectEnergyUtils.isUserDetail(response);
 
 
-                                rpcCall_collectEnergy();
-                                rpcCall_queryNextAction();
-                                rpcCall_pageQueryDynamics(loader, );
+//                                rpcCall_collectEnergy();
+//                                rpcCall_queryNextAction();
+//                                rpcCall_pageQueryDynamics(loader, );
 
 
 //                                AliMobileAutoCollectEnergyUtils.autoCollectEnergy(loader, response);
